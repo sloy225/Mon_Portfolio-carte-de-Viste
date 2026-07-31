@@ -1,30 +1,218 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        
-        <meta name="viewport" content="with=device-with, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-        <title>Portfolio|Carte de Visite - </title>
-        <link rel="stylesheet" href="style.css">
-    </head> 
-    <body>
-        <div class="container">
-            
-            <div class="carte" data-tilt>
-                <img src="Moi.png">
-                <h2>Abdoul-Aziz Ouedraogo</h2>
-                <p>Chargé d'études Data Analyst <br> Orchestration des données Chez ALCYON-E </p>
-                <div class="reseau">
-                    <a href="https://www.linkedin.com/in/ouedraogoaaziz/"><img src="link.png"></a>
-                    
-                    
-                </div>
-                <a href="mailto:ouedraogoabdoulaziz1960@gmail.com" class="bouton">Contactez-moi</a>
-            </div>
-        </div>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio | Abdoul-Aziz Ouedraogo - Data & IA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="vanilla-tilt.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
 
-        <script src="vanilla-tilt.js"></script>
-    </body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+  <header class="header">
+    <div class="logo">AO<span class="dot">.</span></div>
+    <nav class="nav">
+      <a href="#hero">Accueil</a>
+      <a href="#about">À propos</a>
+      <a href="#skills">Compétences</a>
+      <a href="#projects">Projets</a>
+      <a href="#experience">Expérience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-tag">// Data Analyst · Data Engineer · IA</p>
+        <h1>Abdoul-Aziz <span class="gradient-text">Ouedraogo</span></h1>
+        <h2 class="typed-text" id="typedText"></h2>
+        <p>
+          Étudiant en 5ᵉ année Big Data & IA. Je conçois des pipelines de données,
+          des modèles de Machine Learning et des tableaux de bord qui transforment
+          la donnée brute en décisions business.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+          <a href="mailto:ouedraogoabdoulaziz1960@gmail.com" class="btn btn-secondary">Me contacter</a>
+        </div>
+        <div class="hero-links">
+          <a href="https://www.linkedin.com/in/ouedraogoaaziz/" target="_blank">LinkedIn ↗</a>
+          <a href="https://github.com/sloy225" target="_blank">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-card" data-tilt data-tilt-max="12" data-tilt-glare data-tilt-max-glare="0.3">
+        <div class="hero-card-glow"></div>
+        <img src="Moi.png" alt="Photo de Abdoul-Aziz" class="hero-photo">
+        <p class="hero-role">Chargé d'études Data Analyst<br>Orchestration des données chez ALCYON-E</p>
+        <div class="hero-badges">
+          <span>Python</span><span>SQL</span><span>Power BI</span><span>TensorFlow</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><span></span></div>
+  </section>
+
+  <section id="stats" class="stats-band">
+    <div class="stats-inner">
+      <div class="stat"><span class="counter" data-target="3">0</span>+<p>ans d'expérience data</p></div>
+      <div class="stat"><span class="counter" data-target="10">0</span>+<p>projets Data & IA</p></div>
+      <div class="stat"><span class="counter" data-target="15">0</span>+<p>technos maîtrisées</p></div>
+      <div class="stat"><span class="counter" data-target="100">0</span>%<p>motivé pour un CDI</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="section reveal">
+    <div class="section-inner">
+      <span class="section-label">01 — Profil</span>
+      <h2>À propos</h2>
+      <div class="about-grid">
+        <p>
+          Je suis Data Analyst & Data Engineer basé en Île-de-France, passionné par
+          la transformation de données brutes en insights actionnables. J'ai développé
+          des pipelines de données, des tableaux de bord BI et des modèles de Machine
+          Learning en contexte industriel et grande entreprise (SNCF Réseau, ALCYON).
+        </p>
+        <p>
+          Mon objectif : rejoindre une équipe Data/IA en <strong>CDI</strong> où je peux
+          concevoir, industrialiser et maintenir des solutions data robustes, de la
+          collecte à la restitution des indicateurs métier.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt reveal">
+    <div class="section-inner">
+      <span class="section-label">02 — Expertise</span>
+      <h2>Compétences</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Data Engineering</h3>
+          <p>Python, SQL, ETL/ELT, API REST, Docker, orchestration de pipelines.</p>
+          <div class="bar"><div class="bar-fill" data-level="90"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3>Data Analysis & BI</h3>
+          <p>Power BI, KPI design, reporting automatisé, analyse exploratoire.</p>
+          <div class="bar"><div class="bar-fill" data-level="88"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🧠</div>
+          <h3>Machine Learning & IA</h3>
+          <p>Scikit-learn, TensorFlow/Keras, deep learning, LLMs & RAG.</p>
+          <div class="bar"><div class="bar-fill" data-level="82"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3>Cloud & Outils</h3>
+          <p>Azure, Git/GitHub, VS Code, Streamlit, Node-RED, FastAPI.</p>
+          <div class="bar"><div class="bar-fill" data-level="85"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section reveal">
+    <div class="section-inner">
+      <span class="section-label">03 — Réalisations</span>
+      <h2>Projets Data & IA</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-glow"></div>
+          <h3>Pipeline ETL & Dashboard Power BI</h3>
+          <p>Consolidation de données multi-sources et alimentation d'un dashboard de performance en automatique.</p>
+          <p class="project-tech">Python · SQL · Power BI · Azure</p>
+          <a href="#" class="btn btn-link" target="_blank">Voir sur GitHub →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-glow"></div>
+          <h3>Modèle de prédiction (ML)</h3>
+          <p>Prédiction d'un indicateur métier avec déploiement d'une interface Streamlit interactive.</p>
+          <p class="project-tech">Scikit-learn · Streamlit · GitHub</p>
+          <a href="#" class="btn btn-link" target="_blank">Demo Streamlit →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-glow"></div>
+          <h3>Chatbot IA (RAG)</h3>
+          <p>Système de Retrieval-Augmented Generation pour interroger des documents via un LLM local Ollama.</p>
+          <p class="project-tech">Ollama · Embeddings · Python</p>
+          <a href="#" class="btn btn-link" target="_blank">Voir le repo →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-glow"></div>
+          <h3>Monitoring IoT temps réel</h3>
+          <p>Intégration de capteurs IoT, transformation quasi temps réel et dashboards opérationnels.</p>
+          <p class="project-tech">Node-RED · OPC UA · Python</p>
+          <a href="#" class="btn btn-link" target="_blank">Documentation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section section-alt reveal">
+    <div class="section-inner">
+      <span class="section-label">04 — Parcours</span>
+      <h2>Expérience professionnelle</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Data Analyst & Data Engineer — ALCYON-E</h3>
+          <span class="timeline-date">Nov 2023 – Oct 2026</span>
+          <p>Orchestration de données multi-sources, création d'indicateurs, automatisation Python & SQL, dashboards Power BI pour grands comptes.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Consultant Data (PEPS) — SNCF Réseau</h3>
+          <span class="timeline-date">3 ans</span>
+          <p>Consolidation et fiabilisation de données, amélioration de la qualité data, support aux équipes métiers.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Formation — Big Data & IA</h3>
+          <span class="timeline-date">Étudiant 5ᵉ année</span>
+          <p>Data Engineering, Machine Learning, Deep Learning, BI, immersion internationale (Chongqing City Management College).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section reveal">
+    <div class="section-inner contact-inner">
+      <span class="section-label">05 — Contact</span>
+      <h2>Discutons de votre prochain projet Data & IA</h2>
+      <p>Disponible pour un premier CDI en Data Analyst / Data Engineer.</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <h3>Email</h3>
+          <a href="mailto:ouedraogoabdoulaziz1960@gmail.com">ouedraogoabdoulaziz1960@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/ouedraogoaaziz/" target="_blank">/in/ouedraogoaaziz</a>
+        </div>
+        <div class="contact-item">
+          <h3>GitHub</h3>
+          <a href="https://github.com/sloy225" target="_blank">Mon profil GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Abdoul-Aziz Ouedraogo · Data & IA</p>
+  </footer>
+
+</body>
 </html>
