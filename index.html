@@ -11,6 +11,21 @@
   <script src="vanilla-tilt.js" defer></script>
   <script src="script.js" defer></script>
 </head>
+<div id="chat-bubble" class="chat-bubble">💬</div>
+
+<div id="chat-window" class="chat-window">
+  <div class="chat-header">
+    <span>Assistant Abdoul-Aziz</span>
+    <button id="chat-close">✕</button>
+  </div>
+  <div id="chat-messages" class="chat-messages"></div>
+  <div id="chat-suggestions" class="chat-suggestions"></div>
+  <div class="chat-input-area">
+    <input type="text" id="chat-input" placeholder="Posez une question sur moi...">
+    <button id="chat-send">➤</button>
+  </div>
+</div>
+
 <body>
 
   <canvas id="bg-canvas"></canvas>
