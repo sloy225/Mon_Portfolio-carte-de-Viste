@@ -582,3 +582,40 @@ body.js-ready .reveal.visible {
   .section { padding: 60px 16px; }
   .section h2 { font-size: 26px; }
 }
+
+.section-description{
+    max-width:800px;
+    margin:15px auto 60px;
+    text-align:center;
+    color:#b8c2d9;
+    line-height:1.8;
+}
+
+.skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:20px 0;
+    padding:0;
+    list-style:none;
+}
+
+.skill-list li{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:.85rem;
+    transition:.3s;
+}
+
+.skill-list li:hover{
+    background:#6c63ff;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.skill-card p{
+    line-height:1.7;
+    color:#bfc9df;
+}
