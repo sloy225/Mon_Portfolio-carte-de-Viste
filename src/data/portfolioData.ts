@@ -53,7 +53,7 @@ export const KEY_METRICS: MetricItem[] = [
 export const EXPERIENCES: ExperienceItem[] = [
   {
     id: "sncf-alcyon",
-    role: "Consultant Data & Analytics (Prestation Grand Compte)",
+    role: "Consultant Data Analyst / Engineer (Prestation Grand Compte)",
     company: "ALCYON-E",
     client: "SNCF Réseau (Projet PEPS)",
     period: "Nov. 2023 — Oct. 2026",
